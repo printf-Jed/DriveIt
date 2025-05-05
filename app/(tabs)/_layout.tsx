@@ -1,43 +1,72 @@
 import { Tabs } from 'expo-router';
-import React from 'react';
-import { Platform } from 'react-native';
-
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { Image } from 'react-native';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
-          default: {},
-        }),
-      }}>
+        tabBarActiveTintColor: '#304FFE',
+        tabBarInactiveTintColor: '#B9C3CD',
+        tabBarLabelStyle: {
+          fontFamily: 'Poppins-SemiBold',
+          fontWeight: '600',
+          fontSize: 11,
+        },
+      }}
+    >
+
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: 'Branches',
+          tabBarIcon: ({ color, focused }) => (
+            <Image
+              source={require('../../assets/images/branches.png')}
+              style={{
+                width: 23,
+                height: 28,
+                tintColor: color,
+              }}
+              resizeMode="contain"
+            />
+          ),
         }}
       />
-      <Tabs.Screen
-        name="explore"
+
+<Tabs.Screen
+        name="vehicles"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Vehicles',
+          tabBarIcon: ({ color, focused }) => (
+            <Image
+              source={require('../../assets/images/vehicles.png')}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: color,
+              }}
+              resizeMode="contain"
+            />
+          ),
+        }}
+      />
+      
+      <Tabs.Screen
+        name="account"
+        options={{
+          title: 'Account',
+          tabBarIcon: ({ color, focused }) => (
+            <Image
+              source={require('../../assets/images/account.png')}
+              style={{
+                width: 29,
+                height: 28,
+                tintColor: color,
+              }}
+              resizeMode="contain"
+            />
+          ),
         }}
       />
     </Tabs>
