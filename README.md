@@ -1,50 +1,38 @@
-# Welcome to your Expo app 👋
+# 🚗 Car Rental App UI
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native application built to replicate a car rental interface based on a provided Figma design. This project was created as an assignment to practice and demonstrate front-end development skills using React Native and Expo.
 
-## Get started
+## 📱 Features
 
-1. Install dependencies
+- Category-based car listings (Standard, Prestige, SUV, etc.)
+- Dynamic vehicle details including image, name, price, and specs
+- Bottom navigation with icons (Vehicles, Branches, Account)
+- Search bar for filtering vehicles (static UI for now)
+- Clean layout responsive across devices
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Tech Stack
 
-2. Start the app
+- **React Native**
+- **Expo**
+- **TypeScript**
+- **React Navigation**
+- **Custom styling based on Figma**
 
-   ```bash
-   npx expo start
-   ```
+## 📂 Project Structure
 
-In the output, you'll find options to open the app in a
+- /assets → Static assets (e.g., icons, images)
+- /components → Reusable components (e.g., VehicleCard)
+- /app → Main screen component (e.g. login.tsx)
+- /app/(tabs)/ → Secondary screen components (e.g. vehicles.tsx )
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🎨 UI Inspiration
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+All components and layout are designed based on the provided Figma design.
 
-## Get a fresh project
-
-When you're ready, run:
+## 🚀 Getting Started
 
 ```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+git clone <repo-url>
+cd car-rental-app
+npm install
+npm start
