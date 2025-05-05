@@ -15,7 +15,6 @@ A React Native application built to replicate a car rental interface based on a 
 - **React Native**
 - **Expo**
 - **TypeScript**
-- **React Navigation**
 - **Custom styling based on Figma**
 
 ## 📂 Project Structure
